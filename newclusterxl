@@ -1,0 +1,35 @@
+{
+  "extension": {
+	  "name": "Show ClusterXL Statistics",
+	  "version": "0.1",
+	  "description": "A SmartConsole Extension to show ClusterXL Statistics in a separate tab",
+	  "author": "Gustavo Gomes Rafael Creditos para Danny jung",
+	  "email": "gustavo.grafael@tivit.com",
+	  "product-url": "https://community.checkpoint.com/t5/SmartConsole-Extensions/SmartConsole-Extension-ClusterXL-Statistics/m-p/83215",
+	  "provider": "Gustavo Gomes Rafael",
+	  "license": "GPL",
+	  "extension-version-requirements": {
+		  "minimum-version": "1.2"
+    }
+  },
+  "locations": [
+    {
+		"location": "details-pane",
+		"relevant-types": ["gateways"],
+		"ui-element": {
+			"type": "tab",
+			"caption": "ClusterXL",
+			"tooltip": "Display ClusterXL Statistics",
+			"action": {
+				"details-level": "full",
+				"method": "get",
+				"trigger-id": "gateways-details-pane",
+				"url": "clusterxl.htm"
+        }
+      }
+    }
+  ],
+	"requested-permissions": {
+		"client": ["get-read-only-session", "run-read-only-commands"]
+  }
+}
